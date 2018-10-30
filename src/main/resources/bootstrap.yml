@@ -1,0 +1,33 @@
+spring:
+  application:
+     name: pg-microservice
+  profiles:
+    active: ${SPRING_CONFIG_PROFILE:local-dev}
+  cloud:
+    config:
+      enabled: ${SPRING_CONFIG_ENABLED:false}
+      allowOverride: false
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
+      uri: ${SPRING_CONFIG_LOCATION:http://config-service:8080}
+      label: ${SPRING_CONFIG_LABEL:master}
+      
+encrypt:
+  failOnError: true
+
+management:
+  contextPath: /management
+  security:
+    enabled: false
+
+appVersion: @project.version@
+
+# Supress error log when accessing swagger-ui (known bug)
+logging:
+  level:
+    io:
+      swagger:
+        models:
+          parameters:
+            AbstractSerializableParameter: error

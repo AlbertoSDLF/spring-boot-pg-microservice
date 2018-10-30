@@ -1,0 +1,16 @@
+400:
+  wrongContentType: Content type '%s' not supported
+  default: Your request couldn't be understood. Check for missing or invalid parameters
+401:
+  default: No valid credentials found in the request
+403:
+  default: You don't have permission to access this resource
+404:
+  entityNotFound: No %s with id %s was found 
+  default: No resource was found that matches the request URI
+405:
+  default: Request method not supported
+406:
+  default: Could not find acceptable representation
+500:
+  default: Your request couldn't be processed
