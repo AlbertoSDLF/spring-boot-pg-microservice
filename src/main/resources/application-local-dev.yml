@@ -4,16 +4,16 @@ management:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://127.0.0.1:5432/sanuk
-    username: sanuk
-    password: sanuk
+    url: jdbc:postgresql://127.0.0.1:5433/test_db
+    username: test_db_owner
+    password: test_db_owner
   jpa:
     generate-ddl: false
 
 requestLogger:
   enabled: true # Disabled by default
   format: json # Plain text by default
-  excluded: /configuration/security,/configuration/ui,/swagger*/**,/v2/api-docs,/webjars/**
+  excluded: /configuration/**, /swagger*/**, /v2/api-docs, /webjars/**, /images/**
   level: INFO # INFO for logging 2xx, 4xx and 5xx responses. ERROR (default) for only 4xx and 5xx
 
 logging:

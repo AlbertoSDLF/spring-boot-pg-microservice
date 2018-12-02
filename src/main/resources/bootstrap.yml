@@ -23,11 +23,10 @@ management:
 
 appVersion: @project.version@
 
-# Supress error log when accessing swagger-ui (known bug)
 logging:
   level:
     io:
       swagger:
         models:
           parameters:
-            AbstractSerializableParameter: error
+            AbstractSerializableParameter: error # Supress error log when accessing swagger-ui (known bug)
